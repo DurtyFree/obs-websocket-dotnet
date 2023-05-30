@@ -276,7 +276,7 @@ namespace OBS.WebSocket.NET
                 if (Connection.State == WebSocketState.Open)
                     break;
 
-            } while (startTime + Timeout < DateTime.Now);
+            } while (startTime + Timeout > DateTime.Now);
 
             if (Connection.State != WebSocketState.Open)
                 return;
